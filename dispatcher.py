@@ -21,16 +21,14 @@ from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
-# lita_server2014 = importlib.import_module("lita_library_linked_data.server", None)
-
-from lita_library_linked_data.server import app as lita_app
-
+lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
+nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 
 application = DispatcherMiddleware(
     publisher_app,
     {'/coasl-webinar-2014': coasl_server2014.app,
-     '/lita-webinar-2014': lita_app
-     })
+     '/lita-webinar-2014': lita_server2014.app,
+     '/next-library-systems-2014': nextlibsys_server2014.app})
 
 def main():
     run_simple('0.0.0.0', 8080, application, use_reloader=True)
