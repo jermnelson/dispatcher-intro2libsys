@@ -21,19 +21,24 @@ from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
+dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
+islandora_camp2014 = importlib.import_module('islandora-camp-2014', None)
+
 
 application = DispatcherMiddleware(
     publisher_app,
     {'/coasl-webinar-2014': coasl_server2014.app,
+     '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/lita-webinar-2014': lita_server2014.app,
+     '/islandora-camp-2014': islandora_camp2014.presentation,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/pycon-2014-poster': pycon_poster2014.poster})
 
 def main():
-    run_simple('0.0.0.0', 8080, application, use_reloader=True)
+    run_simple('0.0.0.0', 8000, application, use_reloader=True)
 
 
 if __name__ == '__main__':
