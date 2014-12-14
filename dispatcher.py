@@ -26,6 +26,7 @@ lita_server2014 = importlib.import_module("lita-library-linked-data.server", Non
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
+intro_redis = importlib.import_module('introduction-to-redis', None)
 
 
 application = DispatcherMiddleware(
@@ -33,6 +34,7 @@ application = DispatcherMiddleware(
     {'/coasl-webinar-2014': coasl_server2014.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/lita-webinar-2014': lita_server2014.app,
+     '/introduction-to-redis': intro_redis.app,
      '/islandora-camp-2014': islandora_camp2014.presentation,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/pycon-2014-poster': pycon_poster2014.poster})
