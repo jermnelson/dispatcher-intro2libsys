@@ -12,7 +12,8 @@ Flask dispatcher for intro2libsys.info
 1.  Create a symbolic link between the dispacher root directory and the cloned new project directory
     you created in the first step. `ln -s full-path-of-new-project new-project`
 
-1.  For Windows, 
+1.  For Windows, create a symbolic link from a Command-line (not Powershell) with the following 
+    command, `mklink /D dir1 dir2`
 
 
 ## Running under uwsgi 

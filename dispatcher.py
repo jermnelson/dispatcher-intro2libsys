@@ -21,21 +21,23 @@ from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
+code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
-islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
+##islandora_camp2014 = importlib.import_module('islandora-camp-2014', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
 
 
 application = DispatcherMiddleware(
     publisher_app,
     {'/coasl-webinar-2014': coasl_server2014.app,
+     '/code4lib-2015': code4lib_talk2015.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/lita-webinar-2014': lita_server2014.app,
      '/introduction-to-redis': intro_redis.app,
-     '/islandora-camp-2014': islandora_camp2014.presentation,
+  ##   '/islandora-camp-2014': islandora_camp2014.presentation,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/pycon-2014-poster': pycon_poster2014.poster})
 
