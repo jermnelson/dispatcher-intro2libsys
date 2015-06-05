@@ -28,6 +28,7 @@ dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 niso_webinar2015 = importlib.import_module("niso-2015-webinar", None)
+or_talk2015 = importlib.import_module("OR2015-FIG-Presentation", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 ##islandora_camp2014 = importlib.import_module('islandora-camp-2014', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
@@ -43,10 +44,11 @@ application = DispatcherMiddleware(
   ##   '/islandora-camp-2014': islandora_camp2014.presentation,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/niso-2015-webinar': niso_webinar2015.app,
+     '/or-2015': or_talk2015.app,
      '/pycon-2014-poster': pycon_poster2014.poster})
 
 def main():
-    run_simple('0.0.0.0', 8081, application, use_reloader=True)
+    run_simple('0.0.0.0', 8500, application, use_reloader=True)
 
 
 if __name__ == '__main__':
