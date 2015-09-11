@@ -23,6 +23,7 @@ from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
 atla_server2015 = importlib.import_module("atla-2015", None)
+ccc_forum2015 = importlib.import_module("ccc-forum-2015", None)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
 code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
@@ -34,10 +35,10 @@ pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 ##islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
 
-
 application = DispatcherMiddleware(
     publisher_app,
     {'/atla-2015': atla_server2015.app,
+     '/ccc-forum-2015': ccc_forum2015.app,
      '/coasl-webinar-2014': coasl_server2014.app,
      '/code4lib-2015': code4lib_talk2015.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
