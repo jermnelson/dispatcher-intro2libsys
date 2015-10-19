@@ -23,6 +23,7 @@ from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
 atla_server2015 = importlib.import_module("atla-2015", None)
+calcon2015 = importlib.import_module("calcon-2015", None)
 cc_parents2015 = importlib.import_module("cc-parents-2015", None)
 ccc_forum2015 = importlib.import_module("ccc-forum-2015", None)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
@@ -41,6 +42,7 @@ intro_redis = importlib.import_module('introduction-to-redis', None)
 application = DispatcherMiddleware(
     publisher_app,
     {'/atla-2015': atla_server2015.app,
+     '/calcon-2015': calcon2015.app,
      '/cc-parents-weekend-2015': cc_parents2015.app,
      '/ccc-forum-2015': ccc_forum2015.app,
      '/coasl-webinar-2014': coasl_server2014.app,
