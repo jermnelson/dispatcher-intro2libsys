@@ -29,6 +29,7 @@ ccc_forum2015 = importlib.import_module("ccc-forum-2015", None)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
 code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
+fac_iot = importlib.import_module("fac-iot.fac_iot.app", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 niso_webinar2015 = importlib.import_module("niso-2015-webinar", None)
@@ -48,6 +49,7 @@ application = DispatcherMiddleware(
      '/coasl-webinar-2014': coasl_server2014.app,
      '/code4lib-2015': code4lib_talk2015.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
+     '/fac-iot': fac_iot.app,
      '/lita-webinar-2014': lita_server2014.app,
      '/introduction-to-redis': intro_redis.app,
   ##   '/islandora-camp-2014': islandora_camp2014.presentation,
