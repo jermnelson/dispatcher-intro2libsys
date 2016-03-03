@@ -1,0 +1,7 @@
+web:
+  build: .
+  dockerfile: DockerfileNginx
+  ports:
+   - "80:80"
+intro2libsys:
+  build: .

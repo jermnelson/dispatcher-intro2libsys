@@ -1,0 +1,3 @@
+FROM nginx:latest
+MAINTAINER Jeremy Nelson <jermnelson@gmail.com>
+COPY intro2libsys.conf /etc/sites-available/

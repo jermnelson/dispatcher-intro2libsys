@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y && \
   apt-get install -y git &&\
   apt-get install -y  nginx &&\
   apt-get install -y python3-pip &&\
+  apt-get autoremove -y &&\
   mkdir $DISPATCH_HOME
 
 # Copy dispatcher.py
@@ -41,6 +42,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 \
   && cd $DISPATCH_HOME && pip3 install -r requirements.txt
 
+COPY intro2libsys.cfg $WEB_HOME/intro2libsys.cfg
 WORKDIR $DISPATCH_HOME
 
 # EXPOSE Port 
