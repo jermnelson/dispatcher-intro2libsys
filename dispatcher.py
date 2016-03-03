@@ -23,6 +23,8 @@ DISPATCH_ROOT = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(DISPATCH_ROOT)
 sys.path.append("/opt/")
 from intro2libsys.server import app as publisher_app
+for year in [2014, 2015, 2016]:
+    sys.path.append("/opt/{}".format(year))
 atla_server2015 = importlib.import_module("atla-2015", None)
 calcon2015 = importlib.import_module("calcon-2015", None)
 cc_parents2015 = importlib.import_module("cc-parents-2015", None)
