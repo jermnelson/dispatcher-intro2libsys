@@ -1,6 +1,6 @@
 # Dockerfile for Intro2Libsys.info Main Website
 FROM python:3.5.1
-MAINTAINER: Jeremy Nelson <jermnelson@gmail.com>
+MAINTAINER Jeremy Nelson <jermnelson@gmail.com>
 
 # Set environmental variables
 ENV DISPATCH_HOME /opt/dispatcher
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y && \
   apt-get install -y python3-pip
 
 # Copy dispatcher.py
-COPY dispatcher.py $DISPATCH_HOME
+COPY dispatcher.py $DISPATCH_HOME/.
 
 # Clone intro2libsys and all presentation 
 RUN git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
@@ -34,5 +34,5 @@ RUN git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
   && git clone https://github.com/jermnelson/niso-2015-webinar.git /opt/2015/niso-2015-webinar \
   && git clone https://github.com/jermnelson/open-repository-2015.git /opt/2015/open-repository-2015 \
   && git clone https://github.com/jermnelson/pycon-2014-poster.git /opt/2014/pycon-2014-poster \
-  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 /opt/2015/pyconjp-2015 
+  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 
 
