@@ -19,12 +19,10 @@ from werkzeug.wsgi import DispatcherMiddleware
 
 
 DISPATCH_ROOT = os.path.abspath(os.path.dirname(__file__))
-from intro2libsys.server import app as publisher_app
 
 sys.path.append(DISPATCH_ROOT)
-for year in [2014, 2015, 2016]:
-    sys.path.append("/opt/{}".format(year))
-sys.path.append("/opt/courses")
+sys.path.append("/opt/")
+from intro2libsys.server import app as publisher_app
 atla_server2015 = importlib.import_module("atla-2015", None)
 calcon2015 = importlib.import_module("calcon-2015", None)
 cc_parents2015 = importlib.import_module("cc-parents-2015", None)
@@ -55,7 +53,7 @@ application = DispatcherMiddleware(
      '/fac-iot': fac_iot.app,
      '/lita-webinar-2014': lita_server2014.app,
      '/introduction-to-redis': intro_redis.app,
-  ##   '/islandora-camp-2014': islandora_camp2014.presentation,
+     '/islandora-camp-2014': islandora_camp2014.presentation,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/niso-2015-webinar': niso_webinar2015.app,
      '/or-2015': or_talk2015.app,
