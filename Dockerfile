@@ -28,11 +28,12 @@ RUN git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
   && git clone https://github.com/jermnelson/code4lib-2015-talk.git /opt/2015/code4lib-2015-talk \
   && git clone https://github.com/jermnelson/fac-iot.git /opt/2015/fac-iot \
   && git clone https://github.com/jermnelson/focused-redis-topics.git /opt/courses/focused-redis-topics \
+  && git clone https://github.com/jermnelson/islandora-camp-colorado.git /opt/2014/islandora-camp-colorado \
   && git clone https://github.com/jermnelson/lita-library-linked-data.git /opt/2014/lita-library-linked-data \
   && git clone https://github.com/jermnelson/introduction-to-redis.git /opt/courses/introduction-to-redis \
   && git clone https://github.com/jermnelson/next-library-systems.git /opt/2014/next-library-systems \
   && git clone https://github.com/jermnelson/niso-2015-webinar.git /opt/2015/niso-2015-webinar \
   && git clone https://github.com/jermnelson/open-repository-2015.git /opt/2015/open-repository-2015 \
   && git clone https://github.com/jermnelson/pycon-2014-poster.git /opt/2014/pycon-2014-poster \
-  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 
-
+  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 \
+  && cd $WEB_HOME && pip3 install -r requirements.txt
