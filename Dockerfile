@@ -31,6 +31,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/ccc-forum-2015.git /opt/2015/ccc-forum-2015 \
   && git clone https://github.com/jermnelson/CoASL-RDA-LinkedData.git /opt/2014/coasl-rda-linked-data \
   && git clone https://github.com/jermnelson/code4lib-2015-talk.git /opt/2015/code4lib-2015-talk \
+  && git clone https://github.com/jermnelson/dlf-forum-2014-poster.git /opt/2014/dlf-forum-2014-poster \
   && git clone https://github.com/jermnelson/fac-iot.git /opt/2015/fac-iot \
   && git clone https://github.com/jermnelson/focused-redis-topics.git /opt/courses/focused-redis-topics \
   && git clone https://github.com/jermnelson/islandora-camp-colorado.git /opt/2014/islandora-camp-colorado \
@@ -40,10 +41,11 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/niso-2015-webinar.git /opt/2015/niso-2015-webinar \
   && git clone https://github.com/jermnelson/open-repository-2015.git /opt/2015/open-repository-2015 \
   && git clone https://github.com/jermnelson/pycon-2014-poster.git /opt/2014/pycon-2014-poster \
-  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pycon-jp-2015 \
+  && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pyconjp-2015 \
   && cd $DISPATCH_HOME && pip3 install -r requirements.txt
 
-COPY intro2libsys.cfg $WEB_HOME/intro2libsys.cfg
+COPY instance/intro2libsys.cfg $WEB_HOME/intro2libsys.cfg
+COPY instance/conf_c4l_15.py /opt/2015/code4lib-2015-talk/config.py
 WORKDIR $DISPATCH_HOME
 
 # EXPOSE Port 
