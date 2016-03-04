@@ -1,7 +1,11 @@
 web:
   build: .
   dockerfile: DockerfileNginx
+  links:
+      - intro2libsys:intro2libsys
   ports:
    - "80:80"
 intro2libsys:
   build: .
+  ports:
+   - "5000"

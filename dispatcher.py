@@ -64,7 +64,8 @@ application = DispatcherMiddleware(
      '/pycon-jp-2015': pyconjp_2015.app})
 
 def main():
-    run_simple('0.0.0.0', 8500, application, use_reloader=True, use_debugger=True)
+    #run_simple('0.0.0.0', 8500, application, use_reloader=True, use_debugger=True)
+    run_simple('0.0.0.0', 5000, application, use_reloader=True)
 
 
 if __name__ == '__main__':
