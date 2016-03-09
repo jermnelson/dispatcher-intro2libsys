@@ -1,0 +1,21 @@
+web:
+  build: .
+  dockerfile: DockerfileNginx
+  links:
+      - intro2libsys:intro2libsys
+  ports:
+   - "80:80"
+intro2libsys:
+  build: .
+  links:
+   - semanticServer:semanticServer
+  ports:
+   - "5000"
+semanticServer:
+  image: jermnelson/semantic-server-core:new
+  ports:
+   - "8080:8080"
+   - "61616"
+  volumes:
+   - /opt/data/fcrepo4-data:/usr/share/fcrepo4-data
+   - /opt/data/blazegraph:/usr/share/blazegraph

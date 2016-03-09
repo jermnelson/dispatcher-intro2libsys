@@ -34,6 +34,7 @@ coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
 code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 fac_iot = importlib.import_module("fac-iot.fac_iot.app", None)
+focus_topics_redis = importlib.import_module("focused-redis-topics.run", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 niso_webinar2015 = importlib.import_module("niso-2015-webinar", None)
@@ -54,6 +55,7 @@ application = DispatcherMiddleware(
      '/code4lib-2015': code4lib_talk2015.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/fac-iot': fac_iot.app,
+     '/focused-redis-topics': focus_topics_redis.course, 
      '/lita-webinar-2014': lita_server2014.app,
      '/introduction-to-redis': intro_redis.app,
      '/islandora-camp-2014': islandora_camp2014.presentation,
@@ -64,8 +66,10 @@ application = DispatcherMiddleware(
      '/pycon-jp-2015': pyconjp_2015.app})
 
 def main():
-    #run_simple('0.0.0.0', 8500, application, use_reloader=True, use_debugger=True)
-    run_simple('0.0.0.0', 5000, application, use_reloader=True)
+    if getattr(publisher_app.config, "DEBUG"):
+        run_simple('0.0.0.0', 8500, application, use_reloader=True, use_debugger=True)
+    else:
+        run_simple('0.0.0.0', 5000, application, use_reloader=True)
 
 
 if __name__ == '__main__':
