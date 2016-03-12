@@ -66,7 +66,7 @@ application = DispatcherMiddleware(
      '/pycon-jp-2015': pyconjp_2015.app})
 
 def main():
-    if getattr(publisher_app.config, "DEBUG"):
+    if hasattr(publisher_app.config, "DEBUG"):
         run_simple('0.0.0.0', 8500, application, use_reloader=True, use_debugger=True)
     else:
         run_simple('0.0.0.0', 5000, application, use_reloader=True)

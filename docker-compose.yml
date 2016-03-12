@@ -7,6 +7,15 @@ web:
    - "80:80"
 intro2libsys:
   build: .
-  dockerfile: DockerfileBase
+  links:
+   - semanticServer:semanticServer
   ports:
    - "5000"
+semanticServer:
+  image: jermnelson/semantic-server-core:new
+  ports:
+   - "8080:8080"
+   - "61616"
+  volumes:
+   - /opt/data/fcrepo4-data:/usr/share/fcrepo4-data
+   - /opt/data/blazegraph:/usr/share/blazegraph
