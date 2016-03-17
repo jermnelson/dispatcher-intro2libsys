@@ -14,7 +14,7 @@ intro2libsys:
 semanticServer:
   image: jermnelson/semantic-server-core:latest
   ports:
-   - "8080:8080"
+   - "8080"
    - "61616"
   volumes:
    - /opt/data/fcrepo4-data:/usr/share/fcrepo4-data
