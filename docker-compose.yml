@@ -4,7 +4,7 @@ web:
   links:
       - intro2libsys:intro2libsys
   ports:
-   - "80:80"
+   - "8002:80"
 intro2libsys:
   build: .
   links:
@@ -12,7 +12,7 @@ intro2libsys:
   ports:
    - "5000"
 semanticServer:
-  image: jermnelson/semantic-server-core:new
+  image: jermnelson/semantic-server-core:latest
   ports:
    - "8080:8080"
    - "61616"
