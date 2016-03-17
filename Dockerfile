@@ -6,7 +6,7 @@ MAINTAINER Jeremy Nelson <jermnelson@gmail.com>
 ENV DISPATCH_HOME /opt/dispatcher
 ENV WEB_HOME /opt/intro2libsys
 ENV NGINX_HOME /etc/nginx
-
+ENV TERM xterm
 
 # Update Ubuntu, Install setup tools, nginx, and Git
 RUN apt-get update && apt-get install -y && \

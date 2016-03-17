@@ -4,7 +4,7 @@ web:
   links:
       - intro2libsys:intro2libsys
   ports:
-   - "8002:80"
+   - "80:80"
 intro2libsys:
   build: .
   links:
