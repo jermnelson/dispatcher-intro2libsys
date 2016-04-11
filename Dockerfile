@@ -32,6 +32,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/CoASL-RDA-LinkedData.git /opt/2014/coasl-rda-linked-data \
   && git clone https://github.com/jermnelson/code4lib-2015-talk.git /opt/2015/code4lib-2015-talk \
   && git clone https://github.com/jermnelson/dlf-forum-2014-poster.git /opt/2014/dlf-forum-2014-poster \
+  && git clone https://github.com/jermnelson/dplafest-2016.git /opt/2016/dplafest-2016 \
   && git clone https://github.com/jermnelson/fac-iot.git /opt/2015/fac-iot \
   && git clone https://github.com/jermnelson/focused-redis-topics.git /opt/courses/focused-redis-topics \
   && git clone https://github.com/jermnelson/islandora-camp-colorado.git /opt/2014/islandora-camp-colorado \
