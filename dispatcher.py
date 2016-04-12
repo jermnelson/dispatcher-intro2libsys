@@ -55,6 +55,7 @@ application = DispatcherMiddleware(
      '/coasl-webinar-2014': coasl_server2014.app,
      '/code4lib-2015': code4lib_talk2015.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
+     '/dplafest-2016': dplafest_2016.app,
      '/fac-iot': fac_iot.app,
      '/focused-redis-topics': focus_topics_redis.course, 
      '/lita-webinar-2014': lita_server2014.app,
