@@ -26,6 +26,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
   && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir courses \
   && git clone https://github.com/jermnelson/atla-2015.git /opt/2015/atla-2015 \
+  && git clone https://github.com/jermnelson/atla-2016.git /opt/2016/atla-2016 \
   && git clone https://github.com/jermnelson/calcon-2015.git /opt/2015/calcon-2015 \
   && git clone https://github.com/jermnelson/cc-parents-day-2015.git /opt/2015/cc-parents-2015 \
   && git clone https://github.com/jermnelson/ccc-forum-2015.git /opt/2015/ccc-forum-2015 \
