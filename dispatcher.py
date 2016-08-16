@@ -28,6 +28,7 @@ for year in [2014, 2015, 2016]:
 sys.path.append("/opt/courses")
 atla_server2015 = importlib.import_module("atla-2015", None)
 atla_server2016 = importlib.import_module("atla-2016", None)
+bibcat_dpla2016 = importlib.import_module("bibcat-dpla-2016", None)
 calcon2015 = importlib.import_module("calcon-2015", None)
 cc_parents2015 = importlib.import_module("cc-parents-2015", None)
 ccc_forum2015 = importlib.import_module("ccc-forum-2015", None)
@@ -51,6 +52,7 @@ application = DispatcherMiddleware(
     publisher_app,
     {'/atla-2015': atla_server2015.app,
      '/atla-2016': atla_server2016.app,
+     '/bibcat-dpla-2016': bibcat_dpla2016.app,
      '/calcon-2015': calcon2015.app,
      '/cc-parents-weekend-2015': cc_parents2015.app,
      '/ccc-forum-2015': ccc_forum2015.app,
