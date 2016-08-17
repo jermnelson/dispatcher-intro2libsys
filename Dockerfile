@@ -47,8 +47,9 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pyconjp-2015 \
   && git config --global user.email "jermnelson@gmail.com" \
   && cd $WEB_HOME && git submodule init && git submodule update \
-  #&& cd ebadges && git checkout -b oldebadges && git pull origin oldebadges\
-  && cd $DISPATCH_HOME && pip3 install -r requirements.txt
+  && cd ebadges && git checkout -b oldebadges && git pull origin oldebadges
+   
+RUN cd $DISPATCH_HOME && pip3 install -r requirements.txt
 
 COPY instance/intro2libsys.cfg $WEB_HOME/intro2libsys.cfg
 COPY instance/conf_c4l_15.py /opt/2015/code4lib-2015-talk/config.py
