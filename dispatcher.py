@@ -35,6 +35,7 @@ colo_lib_share_symposium2016 = importlib.import_module("colorado-libraries-share
 ccc_forum2015 = importlib.import_module("ccc-forum-2015", None)
 coasl_server2014 = importlib.import_module("coasl-rda-linked-data.server", None)
 code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
+code4lib_preconf2017 = importlib.import_module("code4lib-2017", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 dplafest_2016 = importlib.import_module("dplafest-2016", None)
 fac_iot = importlib.import_module("fac-iot.fac_iot.app", None)
@@ -59,6 +60,7 @@ application = DispatcherMiddleware(
      '/ccc-forum-2015': ccc_forum2015.app,
      '/coasl-webinar-2014': coasl_server2014.app,
      '/code4lib-2015': code4lib_talk2015.app,
+     '/code4lib-2017': code4lib_preconf2017.app,
      '/colorado-libraries-share-symposium': colo_lib_share_symposium2016.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/dplafest-2016': dplafest_2016.app,

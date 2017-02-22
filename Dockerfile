@@ -24,7 +24,7 @@ COPY requirements.txt $DISPATCH_HOME/requirements.txt
 # Clone intro2libsys and all presentation 
 RUN cd /opt/ \
   && git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
-  && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir courses \
+  && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir 2017 && mkdir courses \
   && git clone https://github.com/jermnelson/atla-2015.git /opt/2015/atla-2015 \
   && git clone https://github.com/jermnelson/atla-2016.git /opt/2016/atla-2016 \
   && git clone https://github.com/jermnelson/calcon-2015.git /opt/2015/calcon-2015 \
@@ -33,6 +33,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/ccc-forum-2015.git /opt/2015/ccc-forum-2015 \
   && git clone https://github.com/jermnelson/CoASL-RDA-LinkedData.git /opt/2014/coasl-rda-linked-data \
   && git clone https://github.com/jermnelson/code4lib-2015-talk.git /opt/2015/code4lib-2015-talk \
+  && git clone https://github.com/jermnelson/code4lib-2017.git /opt/2017/code4lib-2017 \
   && git clone https://github.com/jermnelson/colorado-libraries-share-symposium.git /opt/2016/colorado-libraries-share-symposium \
   && git clone https://github.com/jermnelson/dlf-forum-2014-poster.git /opt/2014/dlf-forum-2014-poster \
   && git clone https://github.com/jermnelson/dplafest-2016.git /opt/2016/dplafest-2016 \
