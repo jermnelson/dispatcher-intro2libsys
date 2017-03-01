@@ -23,7 +23,7 @@ DISPATCH_ROOT = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(DISPATCH_ROOT)
 sys.path.append("/opt/")
 from intro2libsys.server import app as publisher_app
-for year in [2014, 2015, 2016]:
+for year in [2014, 2015, 2016, 2017]:
     sys.path.append("/opt/{}".format(year))
 sys.path.append("/opt/courses")
 atla_server2015 = importlib.import_module("atla-2015", None)
