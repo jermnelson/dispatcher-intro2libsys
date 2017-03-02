@@ -34,6 +34,8 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/CoASL-RDA-LinkedData.git /opt/2014/coasl-rda-linked-data \
   && git clone https://github.com/jermnelson/code4lib-2015-talk.git /opt/2015/code4lib-2015-talk \
   && git clone https://github.com/jermnelson/code4lib-2017.git /opt/2017/code4lib-2017 \
+  && cd /opt/2017/code4lib-2017 && mkdir instance && python $DISPATCH_HOME/make_config.py /opt/2017/code4lib-2017/instance/ \
+  && cd $DISPATCH_HOME \
   && git clone https://github.com/jermnelson/colorado-libraries-share-symposium.git /opt/2016/colorado-libraries-share-symposium \
   && git clone https://github.com/jermnelson/dlf-forum-2014-poster.git /opt/2014/dlf-forum-2014-poster \
   && git clone https://github.com/jermnelson/dplafest-2016.git /opt/2016/dplafest-2016 \
