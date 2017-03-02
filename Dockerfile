@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y && \
 # Copy dispatcher.py
 COPY dispatcher.py $DISPATCH_HOME/dispatcher.py
 COPY requirements.txt $DISPATCH_HOME/requirements.txt
+COPY make_config.py $DISPATCH_HOME/make_config.py
 
 # Clone intro2libsys and all presentation 
 RUN cd /opt/ \
