@@ -47,6 +47,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/open-repository-2015.git /opt/2015/open-repository-2015 \
   && git clone https://github.com/jermnelson/pycon-2014-poster.git /opt/2014/pycon-2014-poster \
   && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pyconjp-2015 \
+  && git clone https://github.com/jermnelson/urls-rdf-apps /opt/2017/urls-rdf-apps \
   && git config --global user.email "jermnelson@gmail.com" \
   && cd $WEB_HOME && git submodule init && git submodule update \
   && cd ebadges && git checkout -b oldebadges && git pull origin oldebadges

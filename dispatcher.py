@@ -48,6 +48,7 @@ pyconjp_2015 = importlib.import_module("pyconjp-2015", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
+urls_rdf = importlib.import_module('urls-rdf-apps', None)
 
 
 application = DispatcherMiddleware(
@@ -73,7 +74,8 @@ application = DispatcherMiddleware(
      '/niso-2015-webinar': niso_webinar2015.app,
      '/or-2015': or_talk2015.app,
      '/pycon-2014-poster': pycon_poster2014.poster,
-     '/pycon-jp-2015': pyconjp_2015.app})
+     '/pycon-jp-2015': pyconjp_2015.app,
+     '/urls-rdf-apps': urls_rdf.app})
 
 def main():
     if hasattr(publisher_app.config, "DEBUG"):
