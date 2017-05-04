@@ -48,6 +48,7 @@ pyconjp_2015 = importlib.import_module("pyconjp-2015", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
+techbytes_2017 = importlib.import_module('techbytes-2017', None)
 urls_rdf = importlib.import_module('urls-rdf-apps', None)
 
 
@@ -75,6 +76,7 @@ application = DispatcherMiddleware(
      '/or-2015': or_talk2015.app,
      '/pycon-2014-poster': pycon_poster2014.poster,
      '/pycon-jp-2015': pyconjp_2015.app,
+     '/techbytes-2017': techbytes_2017.app,
      '/urls-rdf-apps': urls_rdf.app})
 
 def main():
