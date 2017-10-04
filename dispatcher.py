@@ -44,6 +44,7 @@ lita_server2014 = importlib.import_module("lita-library-linked-data.server", Non
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 niso_webinar2015 = importlib.import_module("niso-2015-webinar", None)
 or_talk2015 = importlib.import_module("open-repository-2015", None)
+prospector_cat_ref = importlib.import_moduel("prospector-cat-ref", None)
 pyconjp_2015 = importlib.import_module("pyconjp-2015", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
@@ -74,6 +75,7 @@ application = DispatcherMiddleware(
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/niso-2015-webinar': niso_webinar2015.app,
      '/or-2015': or_talk2015.app,
+     '/prospector-cat-ref': prospector_cat_ref.app,
      '/pycon-2014-poster': pycon_poster2014.poster,
      '/pycon-jp-2015': pyconjp_2015.app,
      '/techbytes-2017': techbytes_2017.app,

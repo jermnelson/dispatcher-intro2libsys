@@ -48,7 +48,8 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/pycon-2014-poster.git /opt/2014/pycon-2014-poster \
   && git clone https://github.com/jermnelson/pyconjp-2015.git /opt/2015/pyconjp-2015 \
   && git clone https://github.com/jermnelson/techbytes-2017.git \
-  && git clone https://github.com/jermnelson/urls-rdf-apps /opt/2017/urls-rdf-apps \
+  && git clone https://github.com/jermnelson/urls-rdf-apps /opt/2017/urls-rdf-apps \ 
+  && git clone https://github.com/jermnelson/prospector-cat-ref.git /opt/2017/prospector-cat-ref \
   && git config --global user.email "jermnelson@gmail.com" \
   && cd $WEB_HOME && git submodule init && git submodule update \
   && cd ebadges && git checkout -b oldebadges && git pull origin oldebadges
