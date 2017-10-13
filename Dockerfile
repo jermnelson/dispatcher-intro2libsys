@@ -38,6 +38,7 @@ RUN cd /opt/ \
   && git clone https://github.com/jermnelson/colorado-libraries-share-symposium.git /opt/2016/colorado-libraries-share-symposium \
   && git clone https://github.com/jermnelson/dlf-forum-2014-poster.git /opt/2014/dlf-forum-2014-poster \
   && git clone https://github.com/jermnelson/dplafest-2016.git /opt/2016/dplafest-2016 \
+  && git clone https://github.com/jermnelson/du-lis-4050.git /opt/2017/du-lis-4050 \
   && git clone https://github.com/jermnelson/fac-iot.git /opt/2015/fac-iot \
   && git clone https://github.com/jermnelson/focused-redis-topics.git /opt/courses/focused-redis-topics \
   && git clone https://github.com/jermnelson/islandora-camp-colorado.git /opt/2014/islandora-camp-colorado \

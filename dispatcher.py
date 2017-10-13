@@ -39,6 +39,7 @@ code4lib_talk2015 = importlib.import_module("code4lib-2015-talk.talk", None)
 code4lib_preconf2017 = importlib.import_module("code4lib-2017", None)
 dlf_forum_poster2014 = importlib.import_module("dlf-forum-2014-poster", None)
 dplafest_2016 = importlib.import_module("dplafest-2016", None)
+du_lis_4050 = importlib.import_module("du-lis-4050", None)
 fac_iot = importlib.import_module("fac-iot.fac_iot.app", None)
 focus_topics_redis = importlib.import_module("focused-redis-topics.run", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
@@ -69,6 +70,7 @@ application = DispatcherMiddleware(
      '/colorado-libraries-share-symposium': colo_lib_share_symposium2016.app,
      '/dlf-forum-2014-poster': dlf_forum_poster2014.poster,
      '/dplafest-2016': dplafest_2016.app,
+     '/du-lis-4050': du_lis_4050.app,
      '/fac-iot': fac_iot.app,
      '/focused-redis-topics': focus_topics_redis.course, 
      '/lita-webinar-2014': lita_server2014.app,
