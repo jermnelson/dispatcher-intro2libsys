@@ -42,6 +42,7 @@ dplafest_2016 = importlib.import_module("dplafest-2016", None)
 du_lis_4050 = importlib.import_module("du-lis-4050", None)
 fac_iot = importlib.import_module("fac-iot.fac_iot.app", None)
 focus_topics_redis = importlib.import_module("focused-redis-topics.run", None)
+harvard_library_2017 = importlib.import_module("harvard-library-presentation", None)
 lita_server2014 = importlib.import_module("lita-library-linked-data.server", None)
 nextlibsys_server2014 = importlib.import_module("next-library-systems", None)
 niso_webinar2015 = importlib.import_module("niso-2015-webinar", None)
@@ -76,6 +77,7 @@ application = DispatcherMiddleware(
      '/lita-webinar-2014': lita_server2014.app,
      '/introduction-to-redis': intro_redis.app,
      '/islandora-camp-2014': islandora_camp2014.presentation,
+     '/harvard-library-presentation': harvard_library_2017.app,
      '/next-library-systems-2014': nextlibsys_server2014.app,
      '/niso-2015-webinar': niso_webinar2015.app,
      '/or-2015': or_talk2015.app,

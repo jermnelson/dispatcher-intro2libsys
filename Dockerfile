@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y && \
 COPY dispatcher.py $DISPATCH_HOME/dispatcher.py
 COPY requirements.txt $DISPATCH_HOME/requirements.txt
 
-# Clone intro2libsys and all presentation 
+# Clone intro2libsys and all presentations 
 RUN cd /opt/ \
   && git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
   && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir 2017 && mkdir courses \
@@ -56,6 +56,9 @@ RUN cd /opt/ \
   && cd $WEB_HOME && git submodule init && git submodule update \
   && cd ebadges && git checkout -b oldebadges && git pull origin oldebadges
    
+# Copy private presentation
+COPY harvard-library-presentation /opt/2017/harvard-library-presentation
+
 RUN cd $DISPATCH_HOME && pip3 install -r requirements.txt
 
 COPY instance/intro2libsys.cfg $WEB_HOME/intro2libsys.cfg
