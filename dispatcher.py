@@ -23,7 +23,7 @@ DISPATCH_ROOT = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(DISPATCH_ROOT)
 sys.path.append("/opt/")
 from intro2libsys.server import app as publisher_app
-for year in [2014, 2015, 2016, 2017]:
+for year in [2014, 2015, 2016, 2017, 2018]:
     sys.path.append("/opt/{}".format(year))
 sys.path.append("/opt/courses")
 atla_server2015 = importlib.import_module("atla-2015", None)
@@ -52,6 +52,7 @@ pyconjp_2015 = importlib.import_module("pyconjp-2015", None)
 pycon_poster2014 = importlib.import_module('pycon-2014-poster', None)
 islandora_camp2014 = importlib.import_module('islandora-camp-colorado', None)
 intro_redis = importlib.import_module('introduction-to-redis', None)
+stanford_library_engineer = importlib.import_module("stanford-full-stack-engineer", None)
 techbytes_2017 = importlib.import_module('techbytes-2017', None)
 urls_rdf = importlib.import_module('urls-rdf-apps', None)
 
@@ -84,6 +85,7 @@ application = DispatcherMiddleware(
      '/prospector-cat-ref': prospector_cat_ref.app,
      '/pycon-2014-poster': pycon_poster2014.poster,
      '/pycon-jp-2015': pyconjp_2015.app,
+     '/stanford-engineer': stanford_library_engineer.app,
      '/techbytes-2017': techbytes_2017.app,
      '/urls-rdf-apps': urls_rdf.app})
 

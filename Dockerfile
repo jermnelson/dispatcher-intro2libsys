@@ -24,7 +24,7 @@ COPY requirements.txt $DISPATCH_HOME/requirements.txt
 # Clone intro2libsys and all presentations 
 RUN cd /opt/ \
   && git clone https://github.com/jermnelson/intro2libsys.git $WEB_HOME \
-  && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir 2017 && mkdir courses \
+  && mkdir 2014 && mkdir 2015 && mkdir 2016 && mkdir 2017 && mkdir 2018 && mkdir courses \
   && git clone https://github.com/jermnelson/atla-2015.git /opt/2015/atla-2015 \
   && git clone https://github.com/jermnelson/atla-2016.git /opt/2016/atla-2016 \
   && git clone https://github.com/jermnelson/calcon-2015.git /opt/2015/calcon-2015 \
@@ -58,6 +58,7 @@ RUN cd /opt/ \
    
 # Copy private presentation
 COPY harvard-library-presentation /opt/2017/harvard-library-presentation
+COPY stanford-full-stack-engineer /opt/2018/stanford-full-stack-engineer
 
 RUN cd $DISPATCH_HOME && pip3 install -r requirements.txt
 
